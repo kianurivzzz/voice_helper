@@ -26,7 +26,7 @@
 
 [vosk GitHub](https://github.com/alphacep/vosk-api)
 
-[vosk](https://alphacephei.com/vosk/
+[vosk](https://alphacephei.com/vosk/)
 
 [sounddevice](https://pypi.org/project/sounddevice/)
 
