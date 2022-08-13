@@ -1,27 +1,23 @@
-import os, sys, requests, subprocess, webbrowser, pyttsx3, datetime
-
-engn = pyttsx3.init()
-engn.setProperty('rate', 180) #speech rate
-
-
-def speak(what):
-    print(what)
-    engn.say( what )
-    engn.runAndWait()
-    engn.stop()
-
-#says text
-def speaker(text):
-    engn.say(text)
-    engn.runAndWait()
+import os, sys, requests, subprocess, webbrowser, datetime
+from config import API_TOKEN
+from v import *
     
-
 #says greeting
 #def salute():
 
 
 #check weather
-#def weather():
+def weather():
+    try:
+        params = {'lat' : 'your lat', 'lon' : 'your lon', 'appid' : API_TOKEN,
+            'units' : 'metric', 'lang' : 'ru'
+            }
+        response = requests.get('https://api.openweathermap.org/data/2.5/weather', params=params)
+        weather_json = response.json()
+        speaker(f"За окном {weather_json['weather'][0]['description']} и {round(weather_json['main']['temp'])} градусов по Цельсию")
+    except:
+        speaker('Произошла ошибка при подключении к API. Проверьте его правильность.')
+    
 
 
 #open browser
@@ -39,11 +35,16 @@ def watchYT():
 
 def nowtime():
     now = datetime.datetime.now()
-    speak(str(now.hour) + ":" + str(now.minute))
+    speaker(str(now.hour) + ":" + str(now.minute))
     
 #open game
 def game():
     subprocess.Popen('C:\Games\Saints Row The Third\SaintsRowTheThird.exe')
+    
+    
+#random news
+#def news():
+        
     
 #talking
 def offtop():
