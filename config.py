@@ -1,3 +1,3 @@
 #для работоспоообности погоды вставьте токен
 
-API_TOKEN = 'fa66e747dc842c4f862b8a19785b3a55'
+API_TOKEN = 'your api key openweather'
