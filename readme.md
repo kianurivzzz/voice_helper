@@ -1,14 +1,7 @@
 # Описание голосового помощника Diana v0.1 ALPHA
 
 Голосовой помощник в процессе разработки. Постепенно будут добавляться новые функции и будет обновляться база "обращение - ответ".
-
-## Содержание:
-1. [Функционал](https://github.com/kianurivzzz/diana_voice_helper#сейчас-она-умеет)
-2. [Для запуска потребуется](https://github.com/kianurivzzz/diana_voice_helper#для-запуска-потребуется)
-3. [Библиотеки](https://github.com/kianurivzzz/diana_voice_helper#библиотеки)
-4. [Языковые пакеты](https://github.com/kianurivzzz/diana_voice_helper#языковые-пакеты-для-vosk)
-
-### Сейчас она умеет: 
+Сейчас она умеет: 
 -Называть текущее время
 -Общаться (немного)
 -Открывать браузер
@@ -16,11 +9,8 @@
 -Выключать и перезагружать компьютер
 -Отключаться по команде
 -Называть текущаю погоду в вашем городе. Для работоспобности этой функции: 
-1. Вставьте ваш токен openweather 
-    > файл config
-2. Вставьте долготу и широту 
-    > файл s 
-        >>функция weather
+1. Вставьте ваш токен openweather (файл config)
+2. Вставьте долготу и широту (файл s, функция weather)
 
 ### Для запуска потребуется: 
 
@@ -36,7 +26,7 @@
 
 [vosk GitHub](https://github.com/alphacep/vosk-api)
 
-[vosk](https://alphacephei.com/vosk/
+[vosk](https://alphacephei.com/vosk/)
 
 [sounddevice](https://pypi.org/project/sounddevice/)
 
